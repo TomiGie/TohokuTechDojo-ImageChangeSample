@@ -2,22 +2,7 @@ package org.tohokutechdojo.firstlesson;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-
-
-import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
-import android.hardware.SensorManager;
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
-import android.util.Log;
-import android.widget.ImageView;
-
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -26,12 +11,17 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startCompassSample();
-
+        startPictureSample();
     }
 
-    private void startCompassSample(){
-        Intent intent = new Intent(this,CompassActivity.class);
+    private void startPictureSample() {
+        Intent intent = new Intent(this, PictureActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
+    private void startCompassSample() {
+        Intent intent = new Intent(this, CompassActivity.class);
         startActivity(intent);
         finish();
     }
